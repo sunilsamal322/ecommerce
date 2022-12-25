@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.product-container{
+  margin: 50px 100px;
+  padding: 50px;
+}
+.box{
+    width: 250px;
+    height: 350px;
+    margin: 25px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: solid 1px orangered;
+    display: inline-block;
+    cursor: pointer;
+}
+.product-image{
+    width: 250px;
+    height: 200px;
+}
+p{
+    margin: 10px;
+}
+.box:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid 1px green;
+}
+.ratings{
+    background-color: green;
+    color: white;
+    padding: 4px;
+    margin-left: 5px;
+}
+#filter-container{
+    text-align: center;
+    margin: 10px auto;
+}
+.filter-option{
+    background-color: #e3e6f3;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+}
+.filter-name{
+    margin-right: 5px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.156);
+    padding: 5px;
+}
+#filter-button{
+    margin: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border: none;
+    transition: .5s ease-in-out;
+}
+#filter-button:hover{
+    background-color: orangered;
+}
