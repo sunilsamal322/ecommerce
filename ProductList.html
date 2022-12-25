@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ProductList.css" type="text/css">
+    <link rel="stylesheet" href="./css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Products</title>
+</head>
+<body>
+    <div id="header">
+        <a href="Product.html"><img src="./images/328-3288902_flipkart-logo-png.png" alt="logo" id="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li>
+                    <form id="form-id">
+                    <input type="text" id="search-bar">
+                    <input type="submit" value="Search" id="search-submit">
+                </form>
+                </li>
+                <li><a href="ProductList.html">Products</a></li>
+                <li><a href="RecommendationPage.html">Products For You</a></li>
+                <li><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="LoginForm.html">Login</a></li>
+                <li><a href="SignupForm.html">Signup</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="filter-container">
+        <label for="brand" class="filter-name">Filter by brand</label>
+        <select id="brand" class="filter-option">
+            <option value="" class="filter-option">Choose brand</option>
+            <option value="Apple" class="filter-option">APPLE</option>
+            <option value="Boat" class="filter-option">BOAT</option>
+            <option value="Boltt" class="filter-option">BOLTT</option>
+            <option value="Samsung" class="filter-option">SAMSUNG</option>
+            <option value="TXOR" class="filter-option">TXOR</option>
+        </select>
+        <label for="price" class="filter-name">Filter by Price</label>
+        <select id="price" class="filter-option">
+            <option value="" class="filter-option">Select Range</option>
+            <option value="price500" class="filter-option">Below &#x20b9;500</option>
+            <option value="price500_1000" class="filter-option">&#x20b9;500-&#x20b9;1000</option>
+            <option value="price1000_1500" class="filter-option">&#x20b9;1000-&#x20b9;1500</option>
+            <option value="price1500_2000" class="filter-option">&#x20b9;1500-&#x20b9;2000</option>
+            <option value="price2000" class="filter-option">Above &#x20b9;2000</option>
+        </select>
+        <button type="submit" id="filter-button" onclick="applyFilter()">Apply Filter</button>
+    </div>
+    <div id="product-container">
+    </div>
+    <script src="./js/Products.js"></script>
+    <script src="./js/Script.js"></script>
+    <script src="./js/ProductList.js"></script>
+    <script src="./js/Search.js"></script>
+</body>
+</html>
