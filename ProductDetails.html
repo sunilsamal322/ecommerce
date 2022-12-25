@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ProductDetails.css">
+    <script src="./js/Products.js" type="text/javascript"></script>
+    <script src="./js/ProductDetails.js"  type="text/javascript"></script>
+    <title>Product Details</title>
+</head>
+  <div class="product-container">
+    <div class="side-image">
+        <script>
+          for(let i=0;i<productFullDetails.images.length;i++){
+            document.write('<button onclick="imageShow('+i+')" class="img-button"><img src='+productFullDetails.images[i]+' alt="Not-Available" class="small-product-image"></button>');
+          }
+        </script>
+    </div>
+    <div id="image-container">
+      <script>
+        imageShow(0);
+      </script>
+    </div>
+    <div class="product-description">
+        <script>
+          let percentageOff=(productFullDetails.initialPrice-productFullDetails.currentPrice)*100/productFullDetails.initialPrice;
+          document.write('<h2 style="color: rgba(0, 0, 0, 0.7);">'+productFullDetails.brand+'</h2>');
+          document.write('<p style="font-weight: 600;font-size: 20px;">'+productFullDetails.name+'</p>');
+          document.write('<span class="ratings"><span>&#9733;</span>'+productFullDetails.rating+'</span>');
+          document.write('<span class="ratings-reviews">'+productFullDetails.totalNoOfRating+' Ratings & '+productFullDetails.totalNoOfReviews+' Reviews</span>');
+          document.write('<p class="green-text">special price</p>');
+          document.write('<p><b class="price-text">&#x20b9;'+productFullDetails.currentPrice+'</b>&nbsp;&nbsp;<del class="del-price-text">&#x20b9;'+productFullDetails.initialPrice+'</del>&nbsp;&nbsp;<b class="green-text">'+Math.round(percentageOff)+'% off</b></p>');
+          document.write('<ul>');
+          for(let i=0;i<productFullDetails.features.length;i++)
+          {
+            document.write('<li>'+productFullDetails.features[i]+'</li>');
+          }
+          document.write('</ul');
+        </script>
+    </div>
+  </div>
+
+  <div class="warranty page-margin">
+      <script>
+        document.write('<span class="brand-name">'+productFullDetails.brand+'</span><span>'+productFullDetails.warrantyPeriod+' Year Manufacturer Warranty</span>');
+      </script>
+  </div>
+
+  <div class="button-div page-margin">
+      <button style="background-color: orange;border: none;" onclick="addCart()">ADD TO CART</button>
+      <a href="Cart.html" style="cursor: pointer;"><button style="background-color: orangered;border: none;">GO TO CART</button></a>
+  </div>
+
+  <div class="page-margin review-box">
+    <script>
+      document.write('<h2>Ratings & Reviews</h2>');
+      if(productFullDetails.reviews.length!=0){
+        document.write('<span class="ratings">');
+        document.write('<span>&#9733;</span>'+productFullDetails.rating+'');
+        document.write('</span>');
+        document.write('<span class="ratings-reviews">');
+        document.write('('+productFullDetails.totalNoOfRating+' Ratings & '+productFullDetails.totalNoOfReviews+' Reviews)');
+        document.write('</span>');
+
+      for(let i=0;i<productFullDetails.reviews.length;i++){
+        document.write('<div class="reviews">');
+        document.write('<span>'+productFullDetails.reviews[i].rating+'</span>&#9733;&nbsp;&nbsp;'+productFullDetails.reviews[i].title+'');
+        document.write('<div style="font-weight: 100;margin: 10px 0px;">');
+        document.write(productFullDetails.reviews[i].review);
+        document.write('</div>');
+        document.write('<span style="color: rgba(0, 0, 0, 0.5);">'+productFullDetails.reviews[i].name+'</span>');
+        }
+      }
+      else{
+        document.write('<p>No reviews yet</P>');
+      }
+    </script>
+    </div>
+  </div>
+</body>
+</html>
