@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <title>Signup Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="signup-form">
+            <Legend>Signup Form</Legend>
+           <div class="input-text">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" required>
+           </div>
+           <div class="input-text">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" required>
+           </div>
+           <div class="input-text">
+            <label for="phone">Phone Number</label><br>
+            <input type="number" id="phone" required>
+           </div>
+           <div class="input-text">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" required>
+           </div>
+           <div class="submit-button">
+                <button type="submit">Signup</button>
+           </div>
+           <div>
+                <p style="color: rgba(0, 0, 0, 0.7);">Already have an account? <a href="LoginForm.html" class="link">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="./js/SignupForm.js"></script>
+</body>
+</html>
